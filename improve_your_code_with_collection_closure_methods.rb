@@ -52,14 +52,17 @@ end
 
 zombie_names = zombies.map { |zombie| zombie.name }
 
-# Now it's starting to look a bit better! But we can make it even more
+# Better. But we can make it even more
 # succinct by using a sortcut syntax when passing the block to map
 
 zombie_names = zombies.map(&name)
 
 # A lot less code then when we started, and still the same result.
 
-
+# We've talked about how Enumerable methods like .map can help us
+# write clean succinct code, but what I haven't told you is that
+# this is actually a popular refactoring technique called
+# replace loop with collection closure method.
 
 brainless = []
 
