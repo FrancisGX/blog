@@ -52,8 +52,8 @@ end
 
 zombie_names = zombies.map { |zombie| zombie.name }
 
-# Better. But we can make it even more
-# succinct by using a sortcut syntax when passing the block to map
+# Better. But we can improve it still by using a sortcut syntax for passing
+# the block to map
 
 zombie_names = zombies.map(&name)
 
@@ -62,7 +62,8 @@ zombie_names = zombies.map(&name)
 # We've talked about how Enumerable methods like .map can help us
 # write clean succinct code, but what I haven't told you is that
 # this is actually a popular refactoring technique called
-# replace loop with collection closure method.
+# replace loop with collection closure method. Let's look at
+# a few more examples of the technique.
 
 brainless = []
 
@@ -70,7 +71,46 @@ zombies.each do |zombie|
   brainless << zombie if zombie.brainless?
 end
 
-# Above we create an empty array and assign it to the variable 'brainless'
+# Here we create an empty array and assign it to the variable 'brainless'
 # Assuming that we already have a collection of zombies, we iterate
 # over them adding each one to the brainless array if it is brainless.
+# Again, so common that Enumerable gives us a method to do just that.
+
+brainless = zombies.select { |zombie| zombie.brainless? }
+
+# .select will return an array containing each element for which the
+# block returned true.
+
+# What if we wanted to do the opposite?
+
+brainy = []
+
+zombies.each do |zombie|
+  brainy << zombie unless zombie.brainless?
+end
+
+# .reject is what we want here. It's essentially the opposite of
+# .select
+
+brainy = zombies.reject { |zombie| zombie.brainless? }
+
+# Let's look at one more example before we wrap this up.
+# Suppose you have a collection of zombies and need to know
+# the total amount of limbs in the collection. One way to
+# do it would be:
+
+limbs = 0
+
+zombies.each do |zombie|
+  limbs += zombie.limbs
+end
+
+# But Enumerable but of course Enumerable has a handy .inject method.
+
+limbs = zombies.inject(0) { |sum, zombie| sum + zombie.limbs }
+
+# .inject is powerful and can do a lot more than just this. But
+# all you need to know to get started using it is that the parameter
+# you pass it will be used as the starting value and will be passed
+# to the block as the first block parameter.
 
