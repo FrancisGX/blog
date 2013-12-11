@@ -114,3 +114,25 @@ limbs = zombies.inject(0) { |sum, zombie| sum + zombie.limbs }
 # you pass it will be used as the starting value and will be passed
 # to the block as the first block parameter.
 
+
+# Example:
+
+class Zombie
+  attr_accessor :name, :brain, :limbs
+
+  def initialize(name, brain, limbs)
+    @name = name
+    @brain = brain
+    @limbs = limbs
+  end
+
+  def brainless?
+    !brain
+  end
+end
+
+zombies = [
+  Zombie.new('Bill', true, 4),
+  Zombie.new('Tim', true, 3),
+  Zombie.new('Phil', false, 2)
+]
