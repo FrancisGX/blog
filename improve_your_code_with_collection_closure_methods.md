@@ -52,7 +52,7 @@ Better. But we can improve it still by using a sortcut syntax for passing
 the block to ```.map```.
 
 ```prettyprint lang-ruby
-zombie_names = zombies.map(&name)
+zombie_names = zombies.map(&:name)
 ```
 
 A lot less code then when we started, and still the same result.
