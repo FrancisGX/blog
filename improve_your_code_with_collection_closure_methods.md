@@ -8,7 +8,7 @@ zombies.each do |zombie|
 end
 ```
 
-Here we want all of the zombies names so we create an empty array and assign it to the variable ```zombie_names``` Assuming that we already have a collection of zombies, we iterate over them adding each zombie's name to the ```zombie_names``` array.
+Here we want all of the zombies names so we create an empty array and assign it to the variable ```zombie_names```. Assuming that we already have a collection of zombies, we iterate over them adding each zombie's name to the ```zombie_names``` array.
 
 Code patterns similar to this one are so common that Ruby actually has built-in support to help you acheive the same effect with less code. Check out [Enumerable](http://ruby-doc.org/core-1.9.3/Enumerable.html). One example of a method Enumerable gives us is ```.map```. ```.map``` takes a block and returns a new array containing the results of calling that block once for every element in the collection. Let's look at an example.
 
