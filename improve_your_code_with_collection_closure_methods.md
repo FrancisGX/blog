@@ -1,4 +1,3 @@
-
 When working with collections of data we often need to iterate over (or traverse) one collection, do something with each element, and gather the results. You might find the code below familiar.
 
 ```prettyprint lang-ruby
@@ -58,7 +57,7 @@ zombie_names = zombies.map(&name)
 
 A lot less code then when we started, and still the same result.
 
-We've talked about how Enumerable methods like ```.map``` can help us write clean succinct code, but what I haven't told you is that this is actually a popular refactoring technique called replace loop with collection closure method. Let's look at a few more examples of the technique.
+We've talked about how Enumerable methods like ```.map``` can help us write clean succinct code, but what I haven't told you is that this is actually a popular refactoring technique called **replace loop with collection closure method**. Let's look at a few more examples of the technique.
 
 ```prettyprint lang-ruby
 brainless = []
