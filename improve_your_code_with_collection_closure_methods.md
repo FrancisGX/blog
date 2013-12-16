@@ -12,8 +12,7 @@ end
 
 Here we want all of the zombies names so we create an empty array and assign it to the variable ```zombie_names``` Assuming that we already have a collection of zombies, we iterate over them adding each zombie's name to the ```zombie_names``` array.
 
-Code patterns similar to this one are so common that Ruby actually has built-in support to help you acheive the same effect with less code. Check out [Enumerable](http://ruby-doc.org/core-1.9.3/Enumerable.html). One example of a method Enumerable gives us is ```.map```.
- ```.map``` takes a block and returns a new array containing the results of calling that block once for every element in the collection. Let's look at an example.
+Code patterns similar to this one are so common that Ruby actually has built-in support to help you acheive the same effect with less code. Check out [Enumerable](http://ruby-doc.org/core-1.9.3/Enumerable.html). One example of a method Enumerable gives us is ```.map```. ```.map``` takes a block and returns a new array containing the results of calling that block once for every element in the collection. Let's look at an example.
 
 ```prettyprint lang-ruby
 collection = [1, 2, 3]
@@ -112,4 +111,16 @@ But of course Enumerable has a handy ```.inject``` method.
 limbs = zombies.inject(0) { |sum, zombie| sum + zombie.limbs }
 ```
 
-```.inject``` is powerful and can do a lot more than just this. But all you need to know to get started using it is that the parameter you pass it will be used as the starting value and will be passed to the block as the first block parameter.
+```.inject``` is powerful and can do a lot more than this. But all you need to know to get started using it is that the parameter you pass it will be used as the starting value and will be passed to the block as the first block parameter.
+
+Look at you, out there learning fancy coding techniques to clean up and beautify your code. You're awesome.
+
+If you're about to open up some source code and impress all of your coworkers by showing off your new knowledge of collection closure methods let me give you a hint.
+
+Look for ```= []```
+
+Most of the time someone instantiates an empty array it's because they're about to start stuffing things into it, and that's where you'll find your new technique can come in handy.
+
+
+Any questions? Like it? Love it? Hate it? Think I left something out? Think I left too much in? Want more? See a mistake or something that could be improved? I'd love to hear from you at ```@FrancisGabrielX```.
+
