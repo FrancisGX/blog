@@ -122,5 +122,5 @@ Look for ```= []```
 Most of the time someone instantiates an empty array it's because they're about to start stuffing things into it, and that's where you'll find your new technique can come in handy.
 
 
-Any questions? Like it? Love it? Hate it? Think I left something out? Think I left too much in? Want more? See a mistake or something that could be improved? I'd love to hear from at [@FrancisGabrielX](https://twitter.com/FrancisGabrielX).
+Any questions? Like it? Love it? Hate it? Think I left something out? Think I left too much in? Want more? See a mistake or something that could be improved? I'd love to hear from you at [@FrancisGabrielX](https://twitter.com/FrancisGabrielX).
 
