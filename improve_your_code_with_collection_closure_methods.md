@@ -108,7 +108,9 @@ end
 But of course Enumerable has a handy ```.inject``` method.
 
 ```prettyprint lang-ruby
-limbs = zombies.inject(0) { |sum, zombie| sum + zombie.limbs }
+limbs = zombies.inject(0) { |sum, zombie|
+  sum + zombie.limbs
+}
 ```
 
 ```.inject``` is powerful and can do a lot more than this. But all you need to know to get started using it is that the parameter you pass it will be used as the starting value and will be passed to the block as the first block parameter.
